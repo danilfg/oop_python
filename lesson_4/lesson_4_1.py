@@ -16,7 +16,7 @@ class BankAccount:
 
     def __setattr__(self, key, value):
         if key == 'balance' and value < self.MIN_BALANCE:
-            raise ValueError(f"Баланс не можеть быть меньше, чем {self.MIN_BALANCE}")
+            raise ValueError(f"Баланс не может быть меньше, чем {self.MIN_BALANCE}")
         print(f"[LOG] "
               f"{datetime.now().strftime("%Y.%m.%d %H:%M:%S.%m")} "
               f"Изменение атрибута '{key}' на значение '{value}'")
